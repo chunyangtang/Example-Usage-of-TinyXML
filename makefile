@@ -5,4 +5,4 @@ main: test.o tinyxml2.o tinyxml2.h
 	g++ -g -c $< -o $@
 
 clean:
-	rm test.o main
+	rm test.o main destination.xml
