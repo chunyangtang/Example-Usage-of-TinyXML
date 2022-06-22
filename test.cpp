@@ -6,7 +6,7 @@
 // Classes, varibles and functions are declared in the namespace of tinyxml2
 using namespace tinyxml2;
 
-int main()
+void readxml_example()
 {
     // Create an object to contain the overall xml document
     XMLDocument doc;
@@ -68,5 +68,65 @@ int main()
         foodchild = foodchild->NextSiblingElement();
         std::cout << "-------------------------\n";
     }
+}
+
+void writexml_example()
+{
+    // Create a blank xml document
+    XMLDocument doc;
+    // Create a declaration node
+    XMLDeclaration *decl = doc.NewDeclaration();
+    // Add declaration node to the document
+    doc.InsertFirstChild(decl);
+    // Create a root element
+    XMLElement *root = doc.NewElement("root_element");
+    // Add the root element to the document
+    doc.InsertEndChild(root);
+    // Create a child element
+    XMLElement *child = doc.NewElement("child_element_1");
+    // Add the child element to the root element
+    root->InsertFirstChild(child);
+    // Add Text content for child
+    /**
+        can also use:
+        @verbatim
+        XMLText *text = doc.NewText("This is a text content");
+        child->InsertFirstChild(text);
+        @endverbatim
+        to set text content
+    */
+    child->SetText("This is a text content");
+    // Create another child element
+    XMLElement *child2 = doc.NewElement("child_element_2");
+    // Add the child element after the first child element
+    root->InsertAfterChild(child, child2);
+    // Add Attribute for root
+    root->SetAttribute("root_attribute", "root_attribute_value");
+    // Add Comment for root
+    /**
+        The following 2 lines can be replaced by:
+        @verbatim
+        XMLComment *comment = root->InsertNewComment("This is a comment")
+        @endverbatim
+        however it'll be add the end of the root element
+     */
+    XMLComment *comment = doc.NewComment("This is a comment");
+    root->InsertFirstChild(comment);
+    // Print the xml document
+    doc.Print();
+    // Delete a child element
+    root->DeleteChild(child2);
+    // Delete comment from root
+    root->DeleteChild(comment);
+    // Save the xml document to a file
+    doc.SaveFile("destination.xml");
+}
+
+int main()
+{
+    // Read part of the example
+    readxml_example();
+    // Write part of the example
+    writexml_example();
     return 0;
 }
