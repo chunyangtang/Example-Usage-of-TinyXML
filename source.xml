@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--This XML File is an example on https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/2885849?fromtitle=xml-->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="osg.AndroidExample"
-      android:installLocation="preferExternal"
-      android:versionCode="1"
-      android:versionName="1.0">
-    <uses-sdk android:targetSdkVersion="8" android:minSdkVersion="8"></uses-sdk>
-    <uses-feature android:glEsVersion="0x00020000"/> <!-- OpenGL min requierements (2.0) -->
-    <uses-permission android:name="android.permission.INTERNET"/>
- 
-    <application android:label="@string/app_name" android:icon="@drawable/osg">
-        <activity android:name=".osgViewer"
-                  android:label="@string/app_name" android:screenOrientation="landscape"> <!--  Force screen to landscape -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
- 
-    </application>
-</manifest>
+<!--This XML File is an example from https://www.w3schools.com/xml/simple.xml , modified in some places-->
+<breakfast_menu date = "2022.6.22" target = "A family">
+    <food shelf_life = "4">
+        <name>Belgian Waffles</name>
+        <price>$5.95</price>
+        <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+        <calories>650</calories>
+    </food>
+    <food shelf_life = "3">
+        <name>Strawberry Belgian Waffles</name>
+        <price>$7.95</price>
+        <description>Light Belgian waffles covered with strawberries and whipped cream</description>
+        <calories>900</calories>
+    </food>
+    <food shelf_life = "2">
+        <name>Berry-Berry Belgian Waffles</name>
+        <price>$8.95</price>
+        <description>Light Belgian waffles covered with an assortment of fresh berries and whipped cream</description>
+        <calories>900</calories>
+    </food>
+    <food shelf_life = "3">
+        <name>French Toast</name>
+        <price>$4.50</price>
+        <description>Thick slices made from our homemade sourdough bread</description>
+        <calories>600</calories>
+    </food>
+    <food shelf_life = "1">
+        <name>Homestyle Breakfast</name>
+        <price>$6.95</price>
+        <description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
+        <calories>950</calories>
+    </food>
+</breakfast_menu>
