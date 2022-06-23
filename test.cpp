@@ -25,6 +25,12 @@ void readxml_example()
         or use LoadFile( FILE* ) to load file from a FILE pointer
     */
     doc.LoadFile("source.xml");
+    // Catch Errors from doc;
+    if (doc.Error())
+    {
+        doc.PrintError();
+        return;
+    }
     // XMLHandle can safely handle error (so no need to have a bunch of if(){}...) and safe to copy.
     XMLHandle docHandle(&doc);
 
