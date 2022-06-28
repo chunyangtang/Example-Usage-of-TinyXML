@@ -8,4 +8,4 @@ test: error_test.o tinyxml2.o tinyxml2.h
 	g++ -g -c $< -o $@
 
 clean:
-	rm test.o main destination.xml
+	rm test.o error_test.o main test destination.xml
