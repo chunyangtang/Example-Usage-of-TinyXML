@@ -8,7 +8,7 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/main",
+            "program": "${workspaceFolder}/test", // Switch between test and main to debug the right program
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

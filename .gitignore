@@ -1,4 +1,6 @@
 .vscode/settings.json
 main
+test
 test.o
+error_test.o
 destination.xml

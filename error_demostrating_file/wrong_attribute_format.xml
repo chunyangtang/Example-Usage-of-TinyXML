@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE PLAY SYSTEM "play.dtd">
+<!--This XML File is an example from https://www.w3schools.com/xml/simple.xml , modified in some places-->
+<breakfast_menu date = "2022.6.22" target = "A family">
+    <food shelf_life = 4> <!-- This is a wrong attribute, it should be shelf_life = "4" -->
+        <name>Belgian Waffles</name>
+        <price>$5.95</price>
+        <description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+        <calories>650</calories>
+    </food>
+</breakfast_menu>
